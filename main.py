@@ -11,6 +11,8 @@ load_dotenv()
 
 app = FastAPI()
 
+logger.info(f"PORT={os.environ.get('PORT')}, SUPABASE_URL_set={bool(os.environ.get('SUPABASE_URL'))}, SUPABASE_KEY_set={bool(os.environ.get('SUPABASE_KEY'))}")
+
 # Initialize Supabase client
 url = os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
